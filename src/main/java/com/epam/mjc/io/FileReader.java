@@ -33,9 +33,6 @@ public class FileReader {
             }
             return new Profile(name, age, email, phone);
         }
-        catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
         catch (IOException e) {
             e.printStackTrace();
         }
