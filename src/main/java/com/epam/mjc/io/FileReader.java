@@ -24,22 +24,10 @@ public class FileReader {
                 String value = parts[1].trim();
 
                 switch (key) {
-                    case "Name": {
-                        name = value;
-                    };
-                    break;
-                    case "Email": {
-                        email = value;
-                        break;
-                    }
-                    case "Age": {
-                        age = Integer.parseInt(value);
-                        break;
-                    }
-                    case "Phone": {
-                        phone = Long.parseLong(value);
-                        break;
-                    }
+                    case "Name":  name  = value; break;
+                    case "Age":   age   = Integer.parseInt(value); break;
+                    case "Email": email = value; break;
+                    case "Phone": phone = Long.parseLong(value); break;
                 }
             }
             return new Profile(name, age, email, phone);
