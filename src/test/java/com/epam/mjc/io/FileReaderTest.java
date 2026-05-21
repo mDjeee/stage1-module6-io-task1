@@ -16,9 +16,9 @@ import static org.junit.Assert.assertTrue;
 
 public class FileReaderTest {
 
-    private final static Path TEST_FILE = Path.of("src/test/resources/test.txt");
-    private final static Path READER_CLASS = Path.of("src/main/java/com/epam/mjc/io/FileReader.java");
-    private final static String SOURCE_CODE_LOCATION = "src/main/java";
+    private static final Path TEST_FILE = Path.of("src/test/resources/test.txt");
+    private static final Path READER_CLASS = Path.of("src/main/java/com/epam/mjc/io/FileReader.java");
+    private static final String SOURCE_CODE_LOCATION = "src/main/java";
     private static Profile profile;
 
     @BeforeClass
@@ -81,7 +81,7 @@ public class FileReaderTest {
     }
 
     public static int getRandomInt(int min, int max) {
-        return (int) ((Math.random() * (max - min)) + min);
+        return new java.util.Random().nextInt(max - min) + min;
     }
 
     public static void createTestFile(String randomString, Integer randomInt) {
