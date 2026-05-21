@@ -28,6 +28,7 @@ public class FileReader {
                     case "Age":   age   = Integer.parseInt(value); break;
                     case "Email": email = value; break;
                     case "Phone": phone = Long.parseLong(value); break;
+                    default: break;
                 }
             }
             return new Profile(name, age, email, phone);
